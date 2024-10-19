@@ -10,7 +10,7 @@ describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [AppComponent, RouterModule.forRoot([])],
-      providers: [provideHttpClient()]
+      providers: [provideHttpClient()],
     }).compileComponents();
   }));
 
