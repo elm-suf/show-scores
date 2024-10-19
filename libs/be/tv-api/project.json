@@ -1,0 +1,20 @@
+{
+  "name": "tv-api",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/be/tv-api/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/be/tv-api",
+        "tsConfig": "libs/be/tv-api/tsconfig.lib.json",
+        "packageJson": "libs/be/tv-api/package.json",
+        "main": "libs/be/tv-api/src/index.ts",
+        "assets": ["libs/be/tv-api/*.md"]
+      }
+    }
+  }
+}
