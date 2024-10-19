@@ -14,7 +14,7 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudId": "671263bd277fa93b0c3a06d6",
+  "nxCloudId": "6713ab7bd24337c0d9826044",
   "plugins": [
     {
       "plugin": "@nx/webpack/plugin",
@@ -26,17 +26,11 @@
     },
     {
       "plugin": "@nx/eslint/plugin",
-      "options": {
-        "cache": true,
-        "targetName": "lint"
-      }
+      "options": { "cache": true, "targetName": "lint" }
     },
     {
       "plugin": "@nx/jest/plugin",
-      "options": {
-        "cache": true,
-        "targetName": "test"
-      }
+      "options": { "cache": true, "targetName": "test" }
     }
   ],
   "targetDefaults": {
