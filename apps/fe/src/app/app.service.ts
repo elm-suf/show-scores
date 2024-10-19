@@ -7,7 +7,7 @@ import { catchError, Observable, of, tap } from 'rxjs';
 export class AppService {
   http = inject(HttpClient);
   search(params: ISearchDto) {
-    return this.http.get<Search<TV>>('/api/tv', { params });
+    return this.http.get<Search<TV>>('/api/tv/search', { params });
   }
 
   ping(): Observable<Ping> {
