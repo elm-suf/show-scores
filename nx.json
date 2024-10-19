@@ -26,11 +26,11 @@
     },
     {
       "plugin": "@nx/eslint/plugin",
-      "options": { "cache": true, "targetName": "lint" }
+      "options": { "targetName": "lint" }
     },
     {
       "plugin": "@nx/jest/plugin",
-      "options": { "cache": true, "targetName": "test" }
+      "options": { "targetName": "test" }
     }
   ],
   "targetDefaults": {
