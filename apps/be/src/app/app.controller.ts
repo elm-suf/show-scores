@@ -1,18 +1,19 @@
 import { Controller, Get } from '@nestjs/common';
 
 import { AppService } from './app.service';
+import { Search, TV } from '@shared/models';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getData() {
-    return this.appService.getData();
+  ping() {
+    return this.appService.ping();
   }
 
-  @Get('/series')
-  searchSeries() {
+  @Get('/tv')
+  searchSeries(): Search<TV> {
     return this.appService.getSeriesByName('');
   }
 }

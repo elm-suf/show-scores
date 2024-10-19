@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { Search, TV } from '@shared/models';
+import { Ping, Search, TV } from '@shared/models';
 
 @Injectable()
 export class AppService {
-  getData(): { message: string } {
+  ping(): Ping {
     return { message: 'Hello API' };
   }
 

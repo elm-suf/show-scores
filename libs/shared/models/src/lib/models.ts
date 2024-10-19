@@ -1,11 +1,5 @@
-export function models(): string {
-  return 'models';
-}
+export * from './Ping';
+export * from './Search';
+export * from './TV';
 
-export type Search<T> = {
-  items: T[];
-};
-
-export type TV = {
-  id: number
-}
+export * from './ISearchDto';
