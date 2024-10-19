@@ -6,14 +6,8 @@ import { Search, TV } from '@shared/models';
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
-
   @Get()
   ping() {
     return this.appService.ping();
-  }
-
-  @Get('/tv')
-  searchSeries(): Search<TV> {
-    return this.appService.getSeriesByName('');
   }
 }
