@@ -9,7 +9,6 @@ services:
   - key: TMDB_API_TOKEN
     sync: false
   region: frankfurt
-  preDeployCommand: pnpm install --frozen-lockfile
-  buildCommand: pnpm exec nx build fe
+  buildCommand: pnpm install --frozen-lockfile
   startCommand: pnpm exec nx run fe:serve --configuration=production
 version: "1"
