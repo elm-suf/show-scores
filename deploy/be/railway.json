@@ -4,7 +4,6 @@
   "build": {
     "builder": "NIXPACKS",
     "buildCommand": "pnpm exec nx run be:build --configuration=production",
-    "nixpacksConfigPath": ""
   },
   "deploy": {
     "startCommand": "pnpm exec nx run be:serve --configuration=production",
