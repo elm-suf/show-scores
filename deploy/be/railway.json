@@ -3,7 +3,7 @@
 
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "pnpm exec nx run be:build --configuration=production",
+    "buildCommand": "pnpm exec nx run be:build --configuration=production"
   },
   "deploy": {
     "startCommand": "pnpm exec nx run be:serve --configuration=production",
