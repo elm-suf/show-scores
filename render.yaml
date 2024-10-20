@@ -1,10 +1,23 @@
 # Exported from Render on 2024-10-20T11:19:20Z
 services:
-- type: web
-  name: show-scores
-  runtime: static
-  repo: https://github.com/elm-suf/show-scores
-  branch: feat/render-deploy
-  buildCommand: pnpm exec nx run fe:build --configuration=production
-  staticPublishPath: dist/apps/fe/browser
-version: "1"
+  - type: web
+    name: be-show-scores
+    runtime: node
+    repo: https://github.com/elm-suf/show-scores
+    plan: free
+    envVars:
+      - key: TMDB_API_TOKEN
+        sync: false
+    region: oregon
+    buildCommand: pnpm install --frozen-lockfile
+    preDeployCommand: pnpm exec nx run BE:build --configuration=production
+    startCommand: pnpm exec nx run be:serve --configuration=production
+
+  - type: web
+    name: show-scores
+    runtime: static
+    repo: https://github.com/elm-suf/show-scores
+    branch: feat/render-deploy
+    buildCommand: pnpm exec nx run fe:build --configuration=production
+    staticPublishPath: dist/apps/fe/browser
+version: '1'
