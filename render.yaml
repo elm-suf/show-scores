@@ -10,7 +10,7 @@ services:
         sync: false
     region: oregon
     buildCommand: pnpm install --frozen-lockfile
-    preDeployCommand: pnpm exec nx run BE:build --configuration=production
+    preDeployCommand: pnpm exec nx run be:build --configuration=production
     startCommand: pnpm exec nx run be:serve --configuration=production
 
   - type: web
