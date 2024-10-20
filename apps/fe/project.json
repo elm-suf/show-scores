@@ -53,7 +53,8 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "fe:build:production"
+          "buildTarget": "fe:build:production",
+          "proxyConfig": "apps/fe/proxy-prod.conf.json"
         },
         "development": {
           "buildTarget": "fe:build:development"
@@ -87,6 +88,10 @@
         "staticFilePath": "dist/apps/fe/browser",
         "spa": true
       }
+    },
+    "docker-build": {
+      "dependsOn": ["build"],
+      "command": "docker build -f apps/fe/Dockerfile . -t fe"
     }
   }
 }

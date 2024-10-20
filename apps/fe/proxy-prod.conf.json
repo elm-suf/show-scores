@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://show-scores-api.up.railway.app",
+    "secure": false
+  }
+}
