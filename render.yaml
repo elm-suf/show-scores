@@ -1,0 +1,15 @@
+# Exported from Render on 2024-10-20T10:46:12Z
+services:
+- type: web
+  name: show-scores
+  runtime: node
+  repo: https://github.com/elm-suf/show-scores
+  plan: free
+  envVars:
+  - key: TMDB_API_TOKEN
+    sync: false
+  region: frankfurt
+  preDeployCommand: pnpm install --frozen-lockfile
+  buildCommand: pnpm exec nx build fe
+  startCommand: pnpm exec nx run fe:serve --configuration=production
+version: "1"
