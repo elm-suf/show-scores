@@ -21,7 +21,7 @@
 	}
 
 	# health check for railway
-	rewrite /health /api
+	rewrite /health /*
 
 	# serve from the set folder
 	root * {$ANGULAR_OUTPUT_PATH}/browser
