@@ -6,6 +6,7 @@
     "buildCommand": "pnpm exec nx run be:build --configuration=production"
   },
   "deploy": {
+    "startCommand": "pnpm exec nx run be:serve --configuration=production",
     "healthcheckPath": "/api",
     "healthcheckTimeout": 30,
     "restartPolicyType": "ON_FAILURE"
