@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "buildCommand": "pnpm exec nx run be:build --configuration=production",
+  "builds": [
+    {
+      "src": "dist/apps/be/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/apps/be/main.js",
+      "methods": ["GET", "POST", "PUT", "DELETE"]
+    }
+  ]
+}
