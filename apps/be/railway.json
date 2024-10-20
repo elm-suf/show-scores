@@ -2,12 +2,12 @@
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "pnpm install --frozen-lockfile && pnpm exec nx run be:build --configuration=production"
+    "buildCommand": "pnpm exec nx run be:build --configuration=production"
   },
   "deploy": {
     "startCommand": "pnpm exec nx run be:serve --configuration=production",
-    "healthcheckPath": "/",
-    "healthcheckTimeout": 100,
-    "restartPolicyType": "NEVER"
+    "healthcheckPath": "/api",
+    "healthcheckTimeout": 30,
+    "restartPolicyType": "ON_FAILURE"
   }
 }
