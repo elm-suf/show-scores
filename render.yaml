@@ -5,6 +5,6 @@ services:
   runtime: static
   repo: https://github.com/elm-suf/show-scores
   branch: feat/render-deploy
-  buildCommand: pnpnpm exec nx run fe:build --configuration=production
+  buildCommand: pnpm exec nx run fe:build --configuration=production
   staticPublishPath: dist/apps/fe/browser
 version: "1"
